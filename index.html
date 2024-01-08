@@ -89,6 +89,7 @@
     height: 50px;
     width: auto;
     font-size: 20px;
+    text-decoration: none;
     }
 
     #btnmenu:hover {
@@ -112,18 +113,18 @@
 
   
 
-<nav class="title-nav d-flex justify-content-between align-items-center fixed-top" style=" margin-top: 58px; background-color: #272727;">
+<nav class="title-nav d-flex justify-content-between align-items-center fixed-top" style=" margin-top: 50px; background-color: #272727;">
     <a style="padding: 15px; color: #FFB700;" class="navbar-brand" href="#">
-        <img src="https://github.com/abdelkb/goodbite/blob/main/img/Logo%20goodbite.png?raw=true" height="40" width="auto" alt=""><span id="title" > Restaurant GOODBITE</span>
+        <img src="https://github.com/abdelkb/goodbite/blob/main/img/Logo%20goodbite.png?raw=true" height="30" width="auto" alt=""><span id="title" > Restaurant GOODBITE</span>
     </a>
 
     <!-- Boutons Facebook et Instagram -->
     <div class="ml-auto">
         <a href="lien_vers_votre_page_facebook" class="btn btn-circle btn-facebook">
-            <img src="https://github.com/abdelkb/goodbite/blob/main/img/facebook-icon.png?raw=true" alt="Facebook" height="40" width="40">
+            <img src="https://github.com/abdelkb/goodbite/blob/main/img/facebook-icon.png?raw=true" alt="Facebook" height="30" width="30">
         </a>
         <a href="lien_vers_votre_compte_instagram" class="btn btn-circle btn-instagram">
-            <img src="https://github.com/abdelkb/goodbite/blob/main/img/instagram-icon.png?raw=true" alt="Instagram" height="40" width="40">
+            <img src="https://github.com/abdelkb/goodbite/blob/main/img/instagram-icon.png?raw=true" alt="Instagram" height="30" width="30">
         </a>
     </div>
 </nav>
@@ -134,16 +135,16 @@
     <div class="mx-auto">
       
       <button class="language-btn mx-2 " onclick="changeLanguage('fr')">
-        <img src="https://github.com/abdelkb/goodbite/blob/main/img/fr-flag.png?raw=true" alt="Drapeau de la France" width="60" height="auto">
+        <img src="https://github.com/abdelkb/goodbite/blob/main/img/fr-flag.png?raw=true" alt="Drapeau de la France" width="50" height="auto">
       </button>
       <button class="language-btn mx-2" onclick="changeLanguage('en')">
-        <img src="https://github.com/abdelkb/goodbite/blob/main/img/en-flag.png?raw=true" alt="Drapeau de la Bretagne" width="60" height="auto">
+        <img src="https://github.com/abdelkb/goodbite/blob/main/img/en-flag.png?raw=true" alt="Drapeau de la Bretagne" width="50" height="auto">
       </button>
       <button class="language-btn mx-2" onclick="changeLanguage('es')">
-        <img src="https://github.com/abdelkb/goodbite/blob/main/img/es-flag.png?raw=true" alt="Drapeau de l'Espagne" width="60" height="auto">
+        <img src="https://github.com/abdelkb/goodbite/blob/main/img/es-flag.png?raw=true" alt="Drapeau de l'Espagne" width="50" height="auto">
       </button>
       <button class="language-btn mx-2" onclick="changeLanguage('ar')">
-        <img src="https://github.com/abdelkb/goodbite/blob/main/img/ma-flag.png?raw=true" alt="Drapeau du Maroc" width="60" height="auto">
+        <img src="https://github.com/abdelkb/goodbite/blob/main/img/ma-flag.png?raw=true" alt="Drapeau du Maroc" width="50" height="auto">
       </button>
 
     </div>
@@ -216,6 +217,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <script>
+    changeLanguage('fr');
     function changeLanguage(languageCode) {
       // Mettez ici le code pour changer la langue en fonction du code de langue fourni
       console.log("Langue changée vers : " + languageCode);
@@ -228,7 +230,7 @@
         document.getElementById('about-us-text').innerText = 'Le Restaurant XYZ vous propose une expérience culinaire exceptionnelle avec des plats préparés avec soin et des ingrédients de qualité.';
         document.getElementById('address-text').innerText = 'Adresse: 123, Rue de la Bonne Cuisine, Ville';
         document.getElementById('phone-text').innerText = 'Téléphone: +123 456 789';
-        document.getElementById('menu').innerText = 'Voir le Menu';
+        document.getElementById('menu').innerHTML = '<a style="color: #FFFF00; text-decoration: none;" href="https://www.google.com/">Voir le Menu</a>';
         document.getElementById('command').innerText = 'Commander sur Glovo';
         document.getElementById('desc').innerText = 'Découvrez notre délicieuse cuisine internationale.';
       } else if (languageCode === 'en') {
@@ -238,7 +240,7 @@
         document.getElementById('about-us-text').innerText = 'Restaurant XYZ offers you an exceptional culinary experience with carefully prepared dishes and quality ingredients.';
         document.getElementById('address-text').innerText = 'Address: 123, Good Food Street, City';
         document.getElementById('phone-text').innerText = 'Phone: +123 456 789';
-        document.getElementById('menu').innerText = 'Our Menu';
+        document.getElementById('menu').innerHTML = '<a style="color: #FFFF00; text-decoration: none;" href="https://www.facebook.com/">Our Menu</a>';
         document.getElementById('command').innerText = 'Order on Glovo';
         document.getElementById('desc').innerText = 'Discover our delicious international cuisine.';
       } else if (languageCode === 'es') {
@@ -248,7 +250,7 @@
         document.getElementById('about-us-text').innerText = 'Restaurante GOODBITE te ofrece una experiencia culinaria excepcional con platos cuidadosamente elaborados e ingredientes de calidad.';
         document.getElementById('address-text').innerText = 'Address: 123, Good Food Street, City';
         document.getElementById('phone-text').innerText = 'Phone: +123 456 789';
-        document.getElementById('menu').innerText = 'Nuestro menú';
+        document.getElementById('menu').innerHTML = '<a style="color: #FFFF00; text-decoration: none;" href="https://www.fast.com/">Nuestro menú</a>';
         document.getElementById('command').innerText = 'Haz tu pedido en Glovo';
         document.getElementById('desc').innerText = 'Descubra nuestra deliciosa cocina internacional.';      } 
         else if (languageCode === 'ar') {
@@ -258,7 +260,7 @@
         document.getElementById('about-us-text').innerText = 'يقدم لك مطعم GOODBITE تجربة طهي استثنائية مع أطباق مُعدة بعناية ومكونات عالية الجودة';
         document.getElementById('address-text').innerText = 'Address: 123, Good Food Street, City';
         document.getElementById('phone-text').innerText = 'Phone: +123 456 789';
-        document.getElementById('menu').innerText = 'قائمة المأكولات';
+        document.getElementById('menu').innerHTML = '<a style="color: #FFFF00; text-decoration: none;" href="https://www.y8.com/">قائمة المأكولات</a>';
         document.getElementById('command').innerText = 'الطلب من غلوفو';
         document.getElementById('desc').innerText = 'اكتشف مطبخنا العالمي اللذيذ';      }
           }
